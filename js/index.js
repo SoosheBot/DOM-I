@@ -40,13 +40,23 @@ const siteContent = {
 //NAVIGATION
   // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"]);
+logo.setAttribute('src','img/logo.png', siteContent["nav"]["img-src"]);
 console.log(logo);
 
 const navBar = document.querySelectorAll('a');
 navBar.forEach((item,i) =>{
   item.textContent = Object.values(siteContent['nav'])[i]
 });
+let navMenu = document.querySelector('nav');
+let childNav = document.createElement('a')
+childNav.textContent= "More Information";
+childNav.style.color = 'red';
+navMenu.appendChild(childNav);
+let prependNav = document.createElement('a')
+prependNav.textContent = "Our Story";
+prependNav.style.color = 'red';
+navMenu.prepend(prependNav);
+
 console.log(navBar);
 
 //CTA
@@ -59,7 +69,7 @@ ctaBtn.textContent = siteContent['cta']['button'];
 console.log(ctaBtn);
 
 const ctaImage = document.getElementById('cta-img');
-ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+ctaImage.setAttribute('src','img/header-img.png', siteContent['cta']['img-src']);
 console.log(ctaImage);
 
 //MAIN TEXT AND IMAGE
@@ -80,7 +90,7 @@ mainText[4].textContent = (siteContent['main-content']['vision-content']);
 console.log(mainText);
 
 const middleImage = document.getElementById('middle-img');
-middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+middleImage.setAttribute('src', 'img/mid-page-accent.jpg', siteContent['main-content']['middle-img-src']);
 console.log(middleImage);
 
 //CONTACT TEXT
