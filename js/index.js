@@ -37,6 +37,50 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+//NAVIGATION
+  // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+console.log(logo);
+
+const navBar = document.querySelectorAll('a');
+navBar.forEach((item,i) =>{
+  item.textContent = Object.values(siteContent['nav'])[i]
+});
+console.log(navBar);
+
+//CTA
+const ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.textContent = siteContent['cta']['h1'];
+console.log(ctaH1);
+
+const ctaBtn = document.querySelector('.cta-text button');
+ctaBtn.textContent = siteContent['cta']['button']; 
+console.log(ctaBtn);
+
+const ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+console.log(ctaImage);
+
+//MAIN TEXT AND IMAGE
+const mainH4 = document.querySelectorAll('.text-content h4');
+mainH4[0].textContent = (siteContent['main-content']['features-h4']);
+mainH4[1].textContent = (siteContent['main-content']['about-h4']);
+mainH4[2].textContent = (siteContent['main-content']['services-h4']);
+mainH4[3].textContent = (siteContent['main-content']['product-h4']);
+mainH4[4].textContent = (siteContent['main-content']['vision-h4']);
+console.log(mainH4);
+
+const mainText = document.querySelectorAll('.text-content p');
+mainText[0].textContent = (siteContent['main-content']['features-content']);
+mainText[1].textContent = (siteContent['main-content']['about-content']);
+mainText[2].textContent = (siteContent['main-content']['services-content']);
+mainText[3].textContent = (siteContent['main-content']['product-content']);
+mainText[4].textContent = (siteContent['main-content']['vision-content']);
+console.log(mainText);
+
+const middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+console.log(middleImage);
+
+//FOOTER TEXT
