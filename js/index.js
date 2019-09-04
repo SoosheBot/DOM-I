@@ -83,4 +83,19 @@ const middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
 console.log(middleImage);
 
+//CONTACT TEXT
+
+const contactText = document.querySelector('.contact h4');
+contactText.textContent = (siteContent['contact']['contact-h4']);
+console.log(contactText);
+
+const contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].textContent = (siteContent['contact']['address']);
+contactInfo[1].textContent = (siteContent['contact']['phone']);
+contactInfo[2].textContent = (siteContent['contact']['email']);
+console.log(contactInfo);
+
 //FOOTER TEXT
+const footerText = document.querySelector('footer p');
+footerText.textContent = (siteContent['footer']['copyright']);
+console.log(footerText);
